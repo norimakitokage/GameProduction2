@@ -7,7 +7,7 @@ enum tagWallFrame
 	WALL_1,		// •Ç‚Ìˆê”Ô¶
 	WALL_2,		// «
 	WALL_3,		// «
-	WALL_4,		// •Ç‚Ì^‚ñ’†
+	WALL_4 = 7,		// •Ç‚Ì^‚ñ’†
 	WALL_5,		// ª
 	WALL_6,		// ª
 	WALL_7,		// •Ç‚Ìˆê”Ô‰E

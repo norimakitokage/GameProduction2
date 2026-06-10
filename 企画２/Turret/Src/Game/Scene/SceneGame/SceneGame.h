@@ -3,7 +3,6 @@
 #include "../../Player/Player.h"
 #include "../../Camera/CameraManager.h"
 #include "../../Landform/LandformManager.h"
-#include "../../Landform/Land/Wall.h"
 
 
 class CSceneGame : public CSceneBase
@@ -14,8 +13,6 @@ private:
 	CCameraManager m_Camera;
 
 	CLandformManager m_Land;
-
-	CWall m_Wall;
 
 public:
 

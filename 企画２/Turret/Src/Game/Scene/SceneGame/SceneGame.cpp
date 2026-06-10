@@ -33,7 +33,6 @@ void CSceneGame::Init()
 	m_Camera.Init();
 	m_Player.Init();
 	m_Land.Init();
-	m_Wall.Init();
 
 }
 
@@ -41,9 +40,6 @@ void CSceneGame::Load()
 {
 	m_Player.Load();
 	m_Land.Load();
-	m_Wall.LoadModel("Data/Landform/Land/Wall.mv1");
-	m_Wall.SetScale(VGet(0.001f, 0.001f, 0.001f));
-	m_Wall.Update();
 
 	CFade::RequestFadeIn();
 	m_State = STARTWAIT;
@@ -89,7 +85,6 @@ void CSceneGame::Exit()
 {
 	m_Player.Exit();
 	m_Land.Exit();
-
 
 	CScene::SetSceneType(tagSceneType::TITLE);
 
