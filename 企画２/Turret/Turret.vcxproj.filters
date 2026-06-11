@@ -186,6 +186,12 @@
     <ClInclude Include="Src\Game\Landform\Land\Wall.h">
       <Filter>ソース ファイル\Game\Landform\Land</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Game\Landform\Land\Ground.h">
+      <Filter>ソース ファイル\Game\Landform\Land</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\System\Count.h">
+      <Filter>ソース ファイル\Game\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
@@ -274,6 +280,12 @@
     </ClCompile>
     <ClCompile Include="Src\Game\Landform\Land\Wall.cpp">
       <Filter>ソース ファイル\Game\Landform\Land</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Landform\Land\Ground.cpp">
+      <Filter>ソース ファイル\Game\Landform\Land</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\System\Count.cpp">
+      <Filter>ソース ファイル\Game\System</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

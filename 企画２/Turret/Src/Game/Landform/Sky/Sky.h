@@ -3,6 +3,7 @@
 
 class CSky : public CObject
 {
-
+public:
+	void Load();
 };
 

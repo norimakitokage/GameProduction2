@@ -9,7 +9,7 @@ private:
 	CWall m_Wall;
 
 private:
-	VECTOR m_WallFramePos[tagWallFrame::WALL_NUM];
+	//VECTOR m_WallFramePos[tagWallFrame::WALL_NUM];
 
 public:
 	void Init();
@@ -17,4 +17,7 @@ public:
 	void Exit();
 	void Draw();
 
+public:
+	VECTOR GetWallPosition(tagWallFrame frameType);
+	VECTOR* GetAllWallPosition();
 };

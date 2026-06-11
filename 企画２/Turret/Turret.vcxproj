@@ -152,6 +152,7 @@
     <ClInclude Include="Src\Game\Camera\CameraManager.h" />
     <ClInclude Include="Src\Game\Camera\CameraPlayer\CameraPlayer.h" />
     <ClInclude Include="Src\Game\Landform\LandformManager.h" />
+    <ClInclude Include="Src\Game\Landform\Land\Ground.h" />
     <ClInclude Include="Src\Game\Landform\Land\Wall.h" />
     <ClInclude Include="Src\Game\Landform\Sky\Sky.h" />
     <ClInclude Include="Src\Game\Player\Player.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="Src\Game\Scene\SceneDefeat\SceneDefeat.h" />
     <ClInclude Include="Src\Game\Scene\SceneGame\SceneGame.h" />
     <ClInclude Include="Src\Game\Scene\SceneTitle\SceneTitle.h" />
+    <ClInclude Include="Src\Game\System\Count.h" />
     <ClInclude Include="Src\Lib\Admin\Data.h" />
     <ClInclude Include="Src\Lib\Admin\Fps.h" />
     <ClInclude Include="Src\Lib\Collision\Collision.h" />
@@ -182,6 +184,7 @@
     <ClCompile Include="Src\Game\Camera\CameraManager.cpp" />
     <ClCompile Include="Src\Game\Camera\CameraPlayer\CameraPlayer.cpp" />
     <ClCompile Include="Src\Game\Landform\LandformManager.cpp" />
+    <ClCompile Include="Src\Game\Landform\Land\Ground.cpp" />
     <ClCompile Include="Src\Game\Landform\Land\Wall.cpp" />
     <ClCompile Include="Src\Game\Landform\Sky\Sky.cpp" />
     <ClCompile Include="Src\Game\Player\Player.cpp" />
@@ -191,6 +194,7 @@
     <ClCompile Include="Src\Game\Scene\SceneDefeat\SceneDefeat.cpp" />
     <ClCompile Include="Src\Game\Scene\SceneGame\SceneGame.cpp" />
     <ClCompile Include="Src\Game\Scene\SceneTitle\SceneTitle.cpp" />
+    <ClCompile Include="Src\Game\System\Count.cpp" />
     <ClCompile Include="Src\Lib\Admin\Data.cpp" />
     <ClCompile Include="Src\Lib\Admin\Fps.cpp" />
     <ClCompile Include="Src\Lib\Collision\Collision.cpp" />

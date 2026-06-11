@@ -1,8 +1,6 @@
 #include "LandformManager.h"
 
-const VECTOR SKY_SIZE = VGet(100.0f, 100.0f, 100.0f);
 
-const VECTOR WALL_SIZE = VGet(0.001f, 0.001f, 0.001f);
 
 void CLandformManager::Init()
 {
@@ -12,13 +10,9 @@ void CLandformManager::Init()
 
 void CLandformManager::Load()
 {
-	m_Sky.LoadModel("Data/Landform/Sky/sky.mv1");
-	m_Sky.SetScale(SKY_SIZE);
-	m_Sky.Update();
+	m_Sky.Load();
 
-	m_Wall.LoadModel("Data/Landform/Wall/wall.mv1");
-	m_Wall.SetScale(WALL_SIZE);
-	m_Wall.Update();
+	m_Wall.Load();
 }
 
 void CLandformManager::Exit()
@@ -33,4 +27,20 @@ void CLandformManager::Draw()
 
 
 	m_Wall.Draw();
+}
+
+VECTOR CLandformManager::GetWallPosition(tagWallFrame frameType)
+{
+	return m_Wall.GetFramePositon(frameType);
+}
+
+VECTOR* CLandformManager::GetAllWallPosition()
+{
+	VECTOR array[WALL_NUM];
+	for (tagWallFrame i = WALL_LEFT; i < WALL_NUM;) {
+		array[i] = m_Wall.GetFramePositon(i);
+		i = (tagWallFrame)(i + 1);
+	}
+
+	return array;
 }

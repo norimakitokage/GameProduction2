@@ -15,8 +15,6 @@ void CSceneGame::Draw()
 	case CSceneBase::STEP:
 	case CSceneBase::UPDATE:
 	case CSceneBase::ENDWAIT:
-		DrawFormatString(WINDOW_SENTER_X, WINDOW_SENTER_Y, WHITE, "ÉQÅ[ÉÄ");
-
 		m_Land.Draw();
 
 		m_Player.Draw();
@@ -41,13 +39,23 @@ void CSceneGame::Load()
 	m_Player.Load();
 	m_Land.Load();
 
+	m_Player.SetPosition(m_Land.GetWallPosition(WALL_MID));
+
 	CFade::RequestFadeIn();
 	m_State = STARTWAIT;
 }
 
 void CSceneGame::StartWait()
 {
+	m_Camera.Step(m_Player.GetPosition());
+	m_Camera.Update();
+
 	if (CFade::IsEndFadeIn()) {
+		
+		VECTOR* vec;
+		vec = m_Land.GetAllWallPosition();
+		m_Player.SetWallFramePosition(vec);
+
 		m_State = STEP;
 	}
 }
