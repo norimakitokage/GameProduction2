@@ -6,26 +6,27 @@ void CLandformManager::Init()
 {
 	m_Sky.Init();
 	m_Wall.Init();
+	m_Ground.Init();
 }
 
 void CLandformManager::Load()
 {
 	m_Sky.Load();
-
 	m_Wall.Load();
+	m_Ground.Load();
 }
 
 void CLandformManager::Exit()
 {
 	m_Sky.Exit();
 	m_Wall.Exit();
+	m_Ground.Exit();
 }
 
 void CLandformManager::Draw()
 {
 	m_Sky.Draw();
-
-
+	m_Ground.Draw();
 	m_Wall.Draw();
 }
 
