@@ -31,6 +31,11 @@ public:
 	static bool CircleToCircle(VECTOR circlePos1, int radius1,
 		VECTOR circlePos2, int radius2);
 
+	// 円と点の当たり判定
+	//	circlePos	:	円の中心座標
+	//  radius		:	円の半径
+	//  dotPos		:	点の座標
+	static bool CircleToDot(VECTOR circlePos, float radius, VECTOR dotPos);
 
 	//ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 	//		3Dの当たり判定

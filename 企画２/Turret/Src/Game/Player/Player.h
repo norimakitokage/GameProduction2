@@ -2,7 +2,7 @@
 #include "../../Lib/Model/Actor.h"
 #include "../Landform/Land/Wall.h"
 
-const float PLAYER_MOVE_SPD = 1.0f;
+const float PLAYER_MOVE_SPD = 0.8f;
 
 class CPlayer : public CActor
 {
@@ -19,7 +19,7 @@ public:
 	void Init() override;
 	void Load();
 	void Step();
-	void Update() override;
+	void Update(VECTOR rot);
 	void Exit() override;
 	void Draw() override;
 

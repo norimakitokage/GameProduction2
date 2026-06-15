@@ -97,6 +97,12 @@
     <Filter Include="ソース ファイル\Game\Landform\Land">
       <UniqueIdentifier>{9f1d1285-3a95-48ef-8133-3fe97b4632af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Game\Player\Shot">
+      <UniqueIdentifier>{ae586740-706a-48d9-9850-67e195604aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Player\Shot\DefaultShot">
+      <UniqueIdentifier>{ea335628-b59f-4ce1-a3cc-36596b03f00b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h">
@@ -192,6 +198,12 @@
     <ClInclude Include="Src\Game\System\Count.h">
       <Filter>ソース ファイル\Game\System</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Game\Player\Shot\ShotBase.h">
+      <Filter>ソース ファイル\Game\Player\Shot</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Player\Shot\DefaultShot\DefaultShot.h">
+      <Filter>ソース ファイル\Game\Player\Shot\DefaultShot</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
@@ -286,6 +298,12 @@
     </ClCompile>
     <ClCompile Include="Src\Game\System\Count.cpp">
       <Filter>ソース ファイル\Game\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Player\Shot\ShotBase.cpp">
+      <Filter>ソース ファイル\Game\Player\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Player\Shot\DefaultShot\DefaultShot.cpp">
+      <Filter>ソース ファイル\Game\Player\Shot\DefaultShot</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

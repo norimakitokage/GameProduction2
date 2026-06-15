@@ -49,6 +49,7 @@ void CSceneGame::StartWait()
 {
 	m_Camera.Step(m_Player.GetPosition());
 	m_Camera.Update();
+	m_Player.Update(m_Camera.GetCamRot());
 
 	if (CFade::IsEndFadeIn()) {
 		
@@ -77,7 +78,7 @@ void CSceneGame::Step()
 void CSceneGame::Update()
 {
 	m_Camera.Update();
-	m_Player.Update();
+	m_Player.Update(m_Camera.GetCamRot());
 
 	m_State = STEP;
 }

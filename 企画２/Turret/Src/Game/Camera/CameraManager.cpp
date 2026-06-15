@@ -117,6 +117,7 @@ VECTOR CCameraManager::GetCamRot() {
 	switch (m_id)
 	{
 	case CCameraManager::ID_PLAY:
+		return m_playerCamera.GetCameraRot();
 		break;
 	}
 	// •Ô‚¹‚È‚©‚Á‚½Žž‚Í0‚ð‘—‚é

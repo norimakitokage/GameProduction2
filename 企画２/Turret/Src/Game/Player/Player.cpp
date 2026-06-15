@@ -2,6 +2,7 @@
 #include "../../Lib/Controll/Keyboard/Key.h"
 #include "../../Lib/Math/ActorMove.h"
 #include "../../Common.h"
+#include "../../Lib/Collision/Collision.h"
 
 const VECTOR PLAYER_MODEL_SIZE = VGet(0.008f, 0.008f, 0.008f);
 
@@ -37,6 +38,17 @@ void CPlayer::Step()
 	if (CKey::Trg(KEY_INPUT_A)) {
 		switch (m_NowWallFrame)
 		{
+		case WALL_LEFT: {
+				float pPosX = m_Pos.x;
+				float pPosZ = m_Pos.z;
+				float wPosX = m_WallFramePos[WALL_LEFT].x;
+				float wPosZ = m_WallFramePos[WALL_LEFT].z;
+				// 端にたどり着いていないか確認
+				if (!CColl::CircleToDot(VGet(wPosX, wPosZ, 0.0f), PLAYER_MOVE_SPD, VGet(pPosX, pPosZ, 0.0f))) {
+					m_MoveVec = CActorMove::GetMoveVec(m_Pos, m_WallFramePos[WALL_LEFT], PLAYER_MOVE_SPD);
+				}
+			}
+			break;
 		case WALL_LEFT1:
 			m_MoveVec = CActorMove::GetMoveVec(m_Pos, m_WallFramePos[WALL_LEFT], PLAYER_MOVE_SPD);
 			break;
@@ -79,12 +91,25 @@ void CPlayer::Step()
 		case WALL_RIGHT1:
 			m_MoveVec = CActorMove::GetMoveVec(m_Pos, m_WallFramePos[WALL_RIGHT], PLAYER_MOVE_SPD);
 			break;
+		case WALL_RIGHT: {
+				float pPosX = m_Pos.x;
+				float pPosZ = m_Pos.z;
+				float wPosX = m_WallFramePos[WALL_RIGHT].x;
+				float wPosZ = m_WallFramePos[WALL_RIGHT].z;
+				// 端にたどり着いていないか確認
+				if (!CColl::CircleToDot(VGet(wPosX, wPosZ, 0.0f), PLAYER_MOVE_SPD, VGet(pPosX, pPosZ, 0.0f))) {
+					m_MoveVec = CActorMove::GetMoveVec(m_Pos, m_WallFramePos[WALL_RIGHT], PLAYER_MOVE_SPD);
+				}
+
+			}
+			break;
 		}
 	}
 }
 
-void CPlayer::Update()
+void CPlayer::Update(VECTOR rot)
 {
+	m_Rot.y = rot.y;
 	m_Pos = VAdd(m_Pos, m_MoveVec);
 	m_MoveVec = ZERO;
 	CObject::Update();

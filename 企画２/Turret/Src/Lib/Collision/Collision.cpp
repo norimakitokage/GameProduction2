@@ -1,4 +1,5 @@
 #include "collision.h"
+#include <math.h>
 
 //“_‚Æ‹éŒ`
 bool CColl::DotToSquare(VECTOR dotPos, VECTOR squarePos,
@@ -64,6 +65,19 @@ bool CColl::CircleToCircle(VECTOR circlePos1, int radius1,
 		return true;
 	}
 	else return false;
+}
+
+bool CColl::CircleToDot(VECTOR circlePos, float radius, VECTOR dotPos)
+{
+	float a, b, c;
+	a = circlePos.x - dotPos.x;
+	b = circlePos.y - dotPos.y;
+	c = sqrtf(a * a + b * b);
+
+	if (c <= radius) {
+		return true;
+	}
+	return false;
 }
 
 //—§•û‘Ì“¯Žm

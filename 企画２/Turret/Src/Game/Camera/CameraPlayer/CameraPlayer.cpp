@@ -22,7 +22,7 @@ const float CAMERA_ROLL_MAX = 0.5f;
 const float CAMERA_ROLL_MIN = -1.0f;
 
 //カメラの初期位置
-const float CAMERA_START_YAW = 2.65f;
+const float CAMERA_START_YAW = 0.1f;
 const float CAMERA_START_ROLL = -0.7f;
 const float CAMERA_POSY_MIN = 0.0f;
 
@@ -46,10 +46,10 @@ void CPlayerCamera::Init() {
 
 void CPlayerCamera::Step(VECTOR vForcus){
 	//各種定義関連
-	const float MAX_LEN_NEAR = 50.0f;
-	const float MAX_LEN_FAR = 60.0f;
-	const float MIN_LEN_NEAR = 40.0f;
-	const float MIN_LEN_FAR = 30.0f;
+	const float MAX_LEN_NEAR = 5.0f;
+	const float MAX_LEN_FAR = 6.0f;
+	const float MIN_LEN_NEAR = 4.0f;
+	const float MIN_LEN_FAR = 3.0f;
 	const float CAM_MOVE_SPEED = 0.5f;
 
 	int X, Y = 0;
@@ -83,6 +83,17 @@ void CPlayerCamera::Step(VECTOR vForcus){
 	camPos.x = sinf(m_CamRot.y) * CAMERA_LENGTH;
 	camPos.y = tanf(m_CamRot.x) * -CAMERA_HIGH;
 	camPos.z = cosf(m_CamRot.y) * CAMERA_LENGTH;
+
+	//camPos = VAdd(camPos, vForcus);
+
+	//// 方向ベクトルの取得
+	//VECTOR dir = VSub(camPos, vForcus);
+	//// 方向ベクトルの長さを求める
+	//float len = VSize(dir);
+	//// 一定以上距離が離れたら
+	//if (len > CAMERA_LENGTH) {
+	//	
+	//}
 
 	////方向ベクトルの取得
 	//VECTOR dir = VSub(m_CamPos, vForcus);
