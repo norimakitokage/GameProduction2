@@ -7,8 +7,14 @@ protected:
 	bool m_ActiveFlag;
 	// ˆÚ“®ƒxƒNƒgƒ‹
 	VECTOR m_MoveVec;
+	// ¶‘¶ŠÔ
+	int m_ActiveTime;
 public:
 	CShotBase();
 	void Init();
 	virtual void Step() = 0;
+
+public:
+	bool GetActiveFlag();
+	void SetActiveFlag(bool flag);
 };

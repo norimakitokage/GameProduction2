@@ -156,8 +156,10 @@
     <ClInclude Include="Src\Game\Landform\Land\Wall.h" />
     <ClInclude Include="Src\Game\Landform\Sky\Sky.h" />
     <ClInclude Include="Src\Game\Player\Player.h" />
+    <ClInclude Include="Src\Game\Player\PlayerStatus.h" />
     <ClInclude Include="Src\Game\Player\Shot\DefaultShot\DefaultShot.h" />
     <ClInclude Include="Src\Game\Player\Shot\ShotBase.h" />
+    <ClInclude Include="Src\Game\Player\Shot\ShotManager.h" />
     <ClInclude Include="Src\Game\Scene\Scene.h" />
     <ClInclude Include="Src\Game\Scene\SceneBase.h" />
     <ClInclude Include="Src\Game\Scene\SceneClear\SceneClear.h" />
@@ -190,8 +192,10 @@
     <ClCompile Include="Src\Game\Landform\Land\Wall.cpp" />
     <ClCompile Include="Src\Game\Landform\Sky\Sky.cpp" />
     <ClCompile Include="Src\Game\Player\Player.cpp" />
+    <ClCompile Include="Src\Game\Player\PlayerStatus.cpp" />
     <ClCompile Include="Src\Game\Player\Shot\DefaultShot\DefaultShot.cpp" />
     <ClCompile Include="Src\Game\Player\Shot\ShotBase.cpp" />
+    <ClCompile Include="Src\Game\Player\Shot\ShotManger.cpp" />
     <ClCompile Include="Src\Game\Scene\Scene.cpp" />
     <ClCompile Include="Src\Game\Scene\SceneBase.cpp" />
     <ClCompile Include="Src\Game\Scene\SceneClear\SceneClear.cpp" />
