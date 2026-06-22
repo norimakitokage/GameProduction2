@@ -1,5 +1,10 @@
 #include "DefaultShot.h"
+#include "../../Common.h"
 
+CDefaultShot::CDefaultShot()
+{
+	CShotBase::Init();
+}
 
 void CDefaultShot::Step()
 {
@@ -15,9 +20,10 @@ void CDefaultShot::Update()
 	CShotBase::Update();
 }
 
-void CDefaultShot::Request(VECTOR moveVec)
+void CDefaultShot::Draw()
 {
-	m_MoveVec = VScale(moveVec, DEFAULT_SHOT_SPD);
-	m_ActiveTime = DEFAULT_SHOT_ACTIVE_TIME;
-	m_ActiveFlag = true;
+	DrawSphere3D(m_Pos, DEFAULT_SHOT_RADIUS, 16, BLUE, BLACK, TRUE);
+	CShotBase::Draw();
 }
+
+

@@ -1,8 +1,9 @@
 #pragma once
 #include "../ShotBase.h"
 
-const float DEFAULT_SHOT_SPD = 10;
+const float DEFAULT_SHOT_SPD = 1.5f;
 const int DEFAULT_SHOT_ACTIVE_TIME = 120;
+const float DEFAULT_SHOT_RADIUS = 0.5f;
 
 class CDefaultShot : public CShotBase {
 private:
@@ -10,10 +11,10 @@ private:
 	//float m_Speed;
 
 public:
+	CDefaultShot();
+
 	void Step();
 	void Update();
+	void Draw() override;
 
-	// ’e‚ÌŒÄ‚Ño‚µ
-	//  VECTOR  moveVec	: ³‹K‰»‚µ‚Ä‚ ‚é’e‚ª”ò‚ñ‚Å‚¢‚­•ûŒü
-	void Request(VECTOR moveVec);
 };

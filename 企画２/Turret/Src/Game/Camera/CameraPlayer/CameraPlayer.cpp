@@ -7,7 +7,7 @@
 //カメラ関連
 const float CAMERA_LENGTH = 10.0f;		//カメラとプレイヤーの距離
 const float CAMERA_HIGH = 5.0f;			//カメラの高さ
-const float CAMERA_TARGET_HIGH = 2.5f;	//注視点の高さ
+const float CAMERA_TARGET_HIGH = 4.5f;	//注視点の高さ
 
 //マウスのスピード、大きいほど遅くなる
 const int MOUSE_SPEED_X = 1000;
@@ -158,6 +158,14 @@ void CPlayerCamera::Update() {
 }
 
 
+
+VECTOR CPlayerCamera::GetDirVector()
+{
+	VECTOR ret;
+	ret = VSub(m_TargetPos, m_CamPos);
+	ret = VNorm(ret);
+	return ret;
+}
 
 bool CPlayerCamera::MousePointCheck() {
 	int x, y;

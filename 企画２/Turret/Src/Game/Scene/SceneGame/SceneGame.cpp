@@ -4,7 +4,7 @@
 #include "../../../Lib/Controll/Keyboard/Key.h"
 #include "../../../Lib/Fade/Fade.h"
 #include "../Scene.h"
-
+#include "../../Player/Input/Input.h"
 
 
 void CSceneGame::Draw()
@@ -19,6 +19,8 @@ void CSceneGame::Draw()
 
 		m_Player.Draw();
 
+		m_Shot.Draw();
+
 		break;
 	}
 }
@@ -27,10 +29,14 @@ void CSceneGame::Draw()
 void CSceneGame::Init()
 {
 	m_State = LOAD;
+
+	CInput* input = CInput::GetInstance();
+	input->Init();
 	
 	m_Camera.Init();
 	m_Player.Init();
 	m_Land.Init();
+	m_Shot.Init();
 
 }
 
@@ -38,6 +44,7 @@ void CSceneGame::Load()
 {
 	m_Player.Load();
 	m_Land.Load();
+	m_Shot.Load();
 
 	m_Player.SetPosition(m_Land.GetWallPosition(WALL_MID));
 
@@ -63,8 +70,12 @@ void CSceneGame::StartWait()
 
 void CSceneGame::Step()
 {
+	CInput* input = CInput::GetInstance();
+	input->Step();
+
 	m_Camera.Step(m_Player.GetPosition());
-	m_Player.Step();
+	m_Player.Step(m_Shot, m_Camera);
+	m_Shot.Step();
 
 	if (CKey::Rep(KEY_INPUT_RETURN)) {
 		CFade::RequestFadeOut();
@@ -79,6 +90,7 @@ void CSceneGame::Update()
 {
 	m_Camera.Update();
 	m_Player.Update(m_Camera.GetCamRot());
+	m_Shot.Update();
 
 	m_State = STEP;
 }
@@ -94,6 +106,7 @@ void CSceneGame::Exit()
 {
 	m_Player.Exit();
 	m_Land.Exit();
+	m_Shot.Exit();
 
 	CScene::SetSceneType(tagSceneType::TITLE);
 

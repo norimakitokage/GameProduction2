@@ -1,8 +1,12 @@
 #pragma once
 #include "../../Lib/Model/Actor.h"
 #include "../Landform/Land/Wall.h"
+#include "Shot/ShotManager.h"
+#include "../Camera/CameraManager.h"
 
 const float PLAYER_MOVE_SPD = 0.8f;
+
+const int SHOT_FRAME_NUM = 7;
 
 class CPlayer : public CActor
 {
@@ -15,16 +19,26 @@ private:
 	// ˆÚ“®ƒxƒNƒgƒ‹
 	VECTOR m_MoveVec;
 
+	// ’Êí’e‚Ì”­ËŠÔŠu
+	int m_DefaultShotTime;
+
 public:
 	void Init() override;
 	void Load();
-	void Step();
+	void Step(CShotMnager& shot, CCameraManager camera);
 	void Update(VECTOR rot);
 	void Exit() override;
 	void Draw() override;
 
+private:
+	// ˆÚ“®
+	void Move();
+	// ’e‚Ì”­Ë
+	void Shot(CShotMnager& shot, CCameraManager camera);
+
 public:
 	void SetWallFramePosition(VECTOR* vecArray);
+
 };
 
 

@@ -52,5 +52,8 @@ public:
 	float GetCamRotY();
 	VECTOR GetCamRot();
 	VECTOR GetCamPos();
+
+	// カメラの方向ベクトル取得
+	VECTOR GetDirVector();
 	
 };

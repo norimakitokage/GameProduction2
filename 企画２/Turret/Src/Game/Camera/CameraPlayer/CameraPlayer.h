@@ -33,6 +33,8 @@ public:
 	float GetCameraRotY() { return m_CamRot.y; }
 	//カメラの注視点
 	VECTOR GetFocus() { return m_TargetPos; }
+	// カメラの正規化方向ベクトルを取得
+	VECTOR GetDirVector();
 
 	//--------------------------------------------
 	//				セッター

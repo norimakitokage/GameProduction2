@@ -2,15 +2,19 @@
 
 enum tagStatus
 {
+	//	—Í
 	POWER,
-	SHOT_INTERVAL,
+	// ’Êí’e‚Ì”­ËŠÔŠu
+	DEFAULT_SHOT_INTERVAL,
 
 	NUM
 };
 
 const int DEFAULT_STATUS[tagStatus::NUM] = {
+	// —Í
 	5,
-	60,
+	// ’Êí’e”­Ë‚ÌŠÔŠu
+	45,
 };
 
 class CPlayerStatus {

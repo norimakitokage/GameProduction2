@@ -138,4 +138,17 @@ VECTOR CCameraManager::GetCamPos() {
 	return VGet(0.0f, 0.0f, 0.0f);
 }
 
+VECTOR CCameraManager::GetDirVector()
+{
+	switch (m_id)
+	{
+	case CCameraManager::ID_PLAY:
+		return m_playerCamera.GetDirVector();
+		break;
+	case CCameraManager::ID_DEBUG:
+		break;
+	}
+	return ZERO;
+}
+
 

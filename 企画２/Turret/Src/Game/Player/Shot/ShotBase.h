@@ -9,12 +9,27 @@ protected:
 	VECTOR m_MoveVec;
 	// 生存時間
 	int m_ActiveTime;
-public:
-	CShotBase();
-	void Init();
-	virtual void Step() = 0;
 
 public:
+	CShotBase();
+	virtual ~CShotBase();
+
+	void Init();
+	virtual void Step() = 0;
+	virtual void Draw();
+
+public:
+	// 玉の呼び出し
+	//  pos		:	初期座標
+	//  moveVec	:	移動ベクトル
+	//  time	:	時間
+	void Request(VECTOR pos, VECTOR moveVec, int time);
+
+	// 移動ベクトルの設定
+	void SetMoveVec();
+
+	// 生存フラグを取得
 	bool GetActiveFlag();
+	// 生存フラグのセット
 	void SetActiveFlag(bool flag);
 };

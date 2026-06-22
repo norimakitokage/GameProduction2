@@ -103,6 +103,12 @@
     <Filter Include="ソース ファイル\Game\Player\Shot\DefaultShot">
       <UniqueIdentifier>{ea335628-b59f-4ce1-a3cc-36596b03f00b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Game\Player\Input">
+      <UniqueIdentifier>{be26ec35-cbe1-455e-bb28-e5e211897a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Object">
+      <UniqueIdentifier>{610b99d7-c0e4-467c-8c34-5e2521b12b40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h">
@@ -210,6 +216,12 @@
     <ClInclude Include="Src\Game\Player\Shot\ShotManager.h">
       <Filter>ソース ファイル\Game\Player\Shot</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Game\Player\Input\Input.h">
+      <Filter>ソース ファイル\Game\Player\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Object\ProtectCore.h">
+      <Filter>ソース ファイル\Game\Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
@@ -314,8 +326,14 @@
     <ClCompile Include="Src\Game\Player\PlayerStatus.cpp">
       <Filter>ソース ファイル\Game\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Game\Player\Shot\ShotManger.cpp">
+    <ClCompile Include="Src\Game\Player\Shot\ShotManager.cpp">
       <Filter>ソース ファイル\Game\Player\Shot</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Player\Input\Input.cpp">
+      <Filter>ソース ファイル\Game\Player\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Object\ProtectCore.cpp">
+      <Filter>ソース ファイル\Game\Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

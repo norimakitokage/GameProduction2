@@ -3,6 +3,7 @@
 #include "../../Player/Player.h"
 #include "../../Camera/CameraManager.h"
 #include "../../Landform/LandformManager.h"
+#include "../../Player/Shot/ShotManager.h"
 
 
 class CSceneGame : public CSceneBase
@@ -14,6 +15,7 @@ private:
 
 	CLandformManager m_Land;
 
+	CShotMnager m_Shot;
 public:
 
 	void Draw();
