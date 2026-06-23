@@ -4,8 +4,12 @@ CPlayerStatus* CPlayerStatus::m_instance = nullptr;
 
 CPlayerStatus::CPlayerStatus() {
 	// ‰Šú”’l‚ğ“ü—Í
-	for (int i = 0; i < tagStatus::NUM; i++) {
+	for (int i = 0; i < tagStatus::STATUS_NUM; i++) {
 		m_Status[i] = DEFAULT_STATUS[i];
+	}
+
+	for (int i = 0; i < tagWeapon::WEAPON_NUM; i++) {
+		m_Weapon[i] = false;
 	}
 }
 
@@ -34,5 +38,15 @@ int CPlayerStatus::GetStatus(tagStatus type)
 void CPlayerStatus::SetStatus(tagStatus type, int val)
 {
 	m_Status[type] = val;
+}
+
+int CPlayerStatus::GetWeapon(tagWeapon type)
+{
+	return m_Weapon[type];
+}
+
+void CPlayerStatus::SetWeapon(tagWeapon type, bool flag)
+{
+	m_Weapon[type] = flag;
 }
 

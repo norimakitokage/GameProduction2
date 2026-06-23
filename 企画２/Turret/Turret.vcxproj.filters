@@ -109,6 +109,12 @@
     <Filter Include="ソース ファイル\Game\Object">
       <UniqueIdentifier>{610b99d7-c0e4-467c-8c34-5e2521b12b40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Game\Player\Shot\Missile">
+      <UniqueIdentifier>{e3fc7d9e-fde3-464d-8679-b8a7dadd20ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Player\Shot\Beam">
+      <UniqueIdentifier>{15d6a834-be3a-48f0-a537-3cca753a5d7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h">
