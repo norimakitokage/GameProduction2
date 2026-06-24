@@ -21,6 +21,8 @@ void CSceneGame::Draw()
 
 		m_Shot.Draw();
 
+		m_Core.Draw();
+
 		break;
 	}
 }
@@ -37,6 +39,7 @@ void CSceneGame::Init()
 	m_Player.Init();
 	m_Land.Init();
 	m_Shot.Init();
+	m_Core.Init();
 
 }
 
@@ -45,6 +48,7 @@ void CSceneGame::Load()
 	m_Player.Load();
 	m_Land.Load();
 	m_Shot.Load();
+	m_Core.Load();
 
 	m_Player.SetPosition(m_Land.GetWallPosition(WALL_MID));
 
@@ -76,6 +80,7 @@ void CSceneGame::Step()
 	m_Camera.Step(m_Player.GetPosition());
 	m_Player.Step(m_Shot, m_Camera);
 	m_Shot.Step();
+	m_Core.Step();
 
 	if (CKey::Rep(KEY_INPUT_RETURN)) {
 		CFade::RequestFadeOut();
@@ -91,6 +96,7 @@ void CSceneGame::Update()
 	m_Camera.Update();
 	m_Player.Update(m_Camera.GetCamRot());
 	m_Shot.Update();
+	m_Core.Update();
 
 	m_State = STEP;
 }
@@ -107,6 +113,7 @@ void CSceneGame::Exit()
 	m_Player.Exit();
 	m_Land.Exit();
 	m_Shot.Exit();
+	m_Core.Exit();
 
 	CScene::SetSceneType(tagSceneType::TITLE);
 

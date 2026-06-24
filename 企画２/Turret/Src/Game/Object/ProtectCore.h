@@ -1,10 +1,12 @@
 #pragma once
-#include "../../Lib/Model/Object.h"
+#include "../../Lib/Model/Actor.h"
 
 const int CORE_DEFAULT_HP = 500;
-const VECTOR CORE_DEFAULT_POS = VGet(0.0f, 0.0f, 10.0f);
+const VECTOR CORE_DEFAULT_POS = VGet(0.0f, 0.0f, -50.0f);
+const VECTOR CORE_SIZE = VGet(0.02f, 0.02f, 0.02f);
 
-class CProtectCore : public CObject
+
+class CProtectCore : public CActor
 {
 private:
 	// ê∂ë∂ÉtÉâÉO

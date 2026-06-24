@@ -1,14 +1,19 @@
 #include "ProtectCore.h"
 
+
 void CProtectCore::Init()
 {
 	m_Hp = CORE_DEFAULT_HP;
 	m_ActiveFlag = false;
+	m_Pos = CORE_DEFAULT_POS;
+	m_Scale = CORE_SIZE;
 }
 
 void CProtectCore::Load()
 {
-	CObject::LoadModel("");
+	CObject::LoadModel("Data/ActiveObject/ProtectCore.mv1");
+	CObject::Update();
+	CActor::RequestLoop(0, 1.0f);
 }
 
 void CProtectCore::Step()

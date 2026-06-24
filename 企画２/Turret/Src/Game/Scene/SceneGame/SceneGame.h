@@ -4,6 +4,7 @@
 #include "../../Camera/CameraManager.h"
 #include "../../Landform/LandformManager.h"
 #include "../../Player/Shot/ShotManager.h"
+#include "../../Object/ProtectCore.h"
 
 
 class CSceneGame : public CSceneBase
@@ -16,6 +17,8 @@ private:
 	CLandformManager m_Land;
 
 	CShotMnager m_Shot;
+
+	CProtectCore m_Core;
 public:
 
 	void Draw();
