@@ -60,8 +60,10 @@ void CActor::Update() {
 }
 
 //アニメリクエスト
-void CActor::Request(int animId, float animSpd, int animSrcHndl, bool NameCheck) {
-	DetachAnim();
+void CActor::Request(int animId, float animSpd, bool detach, int animSrcHndl, bool NameCheck) {
+	if (detach) {
+		DetachAnim();
+	}
 
 	m_animData.m_hndl = MV1AttachAnim(m_Hndl, animId, animSrcHndl, NameCheck);
 	m_animData.m_id = animId;
@@ -72,15 +74,15 @@ void CActor::Request(int animId, float animSpd, int animSrcHndl, bool NameCheck)
 }
 
 //ループアニメリクエスト
-void CActor::RequestLoop(int animId, float animSpd, int animSrcHndl, bool NameCheck) {
-	Request(animId, animSpd, animSrcHndl, NameCheck);
+void CActor::RequestLoop(int animId, float animSpd, bool detach, int animSrcHndl, bool NameCheck) {
+	Request(animId, animSpd, detach, animSrcHndl, NameCheck);
 	//ここだけ変える
 	m_animData.m_state = ANIM_LOOP;
 }
 
 //エンドループアニメリクエスト
-void CActor::RequestEndLoop(int animId, float animSpd, int animSrcHndl, bool NameCheck) {
-	Request(animId, animSpd, animSrcHndl, NameCheck);
+void CActor::RequestEndLoop(int animId, float animSpd, bool detach, int animSrcHndl, bool NameCheck) {
+	Request(animId, animSpd, detach, animSrcHndl, NameCheck);
 	m_animData.m_state = ANIM_ENDLOOP;
 }
 

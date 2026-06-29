@@ -20,4 +20,6 @@ const int GREEN = GetColor(0, 255, 0);		//—Î
 //‰Šú‰»
 const VECTOR ZERO = VGet(0.0f, 0.0f, 0.0f);
 
+// ƒRƒA‚Ì‰ŠúÀ•W
+const VECTOR CORE_DEFAULT_POS = VGet(0.0f, 0.0f, -50.0f);
 

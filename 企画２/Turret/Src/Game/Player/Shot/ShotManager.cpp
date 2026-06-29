@@ -1,5 +1,4 @@
 #include "ShotManager.h"
-#include "DefaultShot/DefaultShot.h"
 
 const char* SHOT_MODEL_PATH[tagShotType::SHOT_NUM] = {
 	"",
@@ -78,4 +77,9 @@ void CShotMnager::Request(tagShotType type, VECTOR shotPos, VECTOR moveVec)
 	case SHOT_MISSILE:
 		break;
 	}
+}
+
+vector<CShotBase*> CShotMnager::GetVector()
+{
+	return m_Shot;
 }

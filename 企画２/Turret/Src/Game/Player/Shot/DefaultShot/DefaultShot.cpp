@@ -4,12 +4,13 @@
 CDefaultShot::CDefaultShot()
 {
 	CShotBase::Init();
+	m_Type = tagShotType::SHOT_DEFAULT;
 }
 
 void CDefaultShot::Step()
 {
 	m_ActiveTime--;
-	if (m_ActiveTime <= 0) {
+	if (m_ActiveTime <= 0 || m_Pos.y < -5.0f) {
 		m_ActiveFlag = false;
 	}
 }

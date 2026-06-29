@@ -151,6 +151,10 @@
     <ClInclude Include="Src\Game\Camera\CameraDebug\CameraDebug.h" />
     <ClInclude Include="Src\Game\Camera\CameraManager.h" />
     <ClInclude Include="Src\Game\Camera\CameraPlayer\CameraPlayer.h" />
+    <ClInclude Include="Src\Game\Enemy\DefaultEnemy\DefaultEnemy.h" />
+    <ClInclude Include="Src\Game\Enemy\EnemyBase.h" />
+    <ClInclude Include="Src\Game\Enemy\EnemyManager.h" />
+    <ClInclude Include="Src\Game\HitCheck\HitCheck.h" />
     <ClInclude Include="Src\Game\Landform\LandformManager.h" />
     <ClInclude Include="Src\Game\Landform\Land\Ground.h" />
     <ClInclude Include="Src\Game\Landform\Land\Wall.h" />
@@ -169,6 +173,7 @@
     <ClInclude Include="Src\Game\Scene\SceneGame\SceneGame.h" />
     <ClInclude Include="Src\Game\Scene\SceneTitle\SceneTitle.h" />
     <ClInclude Include="Src\Game\System\Count.h" />
+    <ClInclude Include="Src\Game\System\UI\UI.h" />
     <ClInclude Include="Src\Lib\Admin\Data.h" />
     <ClInclude Include="Src\Lib\Admin\Fps.h" />
     <ClInclude Include="Src\Lib\Collision\Collision.h" />
@@ -189,6 +194,10 @@
     <ClCompile Include="Src\Game\Camera\CameraDebug\CameraDebug.cpp" />
     <ClCompile Include="Src\Game\Camera\CameraManager.cpp" />
     <ClCompile Include="Src\Game\Camera\CameraPlayer\CameraPlayer.cpp" />
+    <ClCompile Include="Src\Game\Enemy\DefaultEnemy\DefaultEnemy.cpp" />
+    <ClCompile Include="Src\Game\Enemy\EnemyBase.cpp" />
+    <ClCompile Include="Src\Game\Enemy\EnemyManager.cpp" />
+    <ClCompile Include="Src\Game\HitCheck\HitCheck.cpp" />
     <ClCompile Include="Src\Game\Landform\LandformManager.cpp" />
     <ClCompile Include="Src\Game\Landform\Land\Ground.cpp" />
     <ClCompile Include="Src\Game\Landform\Land\Wall.cpp" />
@@ -207,6 +216,7 @@
     <ClCompile Include="Src\Game\Scene\SceneGame\SceneGame.cpp" />
     <ClCompile Include="Src\Game\Scene\SceneTitle\SceneTitle.cpp" />
     <ClCompile Include="Src\Game\System\Count.cpp" />
+    <ClCompile Include="Src\Game\System\UI\UI.cpp" />
     <ClCompile Include="Src\Lib\Admin\Data.cpp" />
     <ClCompile Include="Src\Lib\Admin\Fps.cpp" />
     <ClCompile Include="Src\Lib\Collision\Collision.cpp" />

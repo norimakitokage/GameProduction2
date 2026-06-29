@@ -1,21 +1,10 @@
 #pragma once
 #include "ShotBase.h"
 #include <vector>
+#include "DefaultShot/DefaultShot.h"
+
 
 using namespace std;
-
-
-enum tagShotType {
-	// 通常弾
-	SHOT_DEFAULT,
-	// レーザー
-	SHOT_BEAM,
-	// ミサイル
-	SHOT_MISSILE,
-
-	// 総数
-	SHOT_NUM
-};
 
 class CShotMnager {
 private:
@@ -34,4 +23,5 @@ public:
 public:
 
 	void Request(tagShotType type, VECTOR shotPos, VECTOR moveVec);
+	vector<CShotBase*> GetVector();
 };

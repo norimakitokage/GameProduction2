@@ -1,37 +1,17 @@
 #pragma once
-
-enum tagScoreUp
-{
-	tow,
-	three,
-	four,
-	five,
-	six,
-
-	num
-};
+#include <DxLib.h>
 
 class CUI
 {
 private:
-	static int m_Hndl[tagScoreUp::num];
+	int m_Hndl;
 	// 表示するかどうかのフラグ
-	static bool m_RateFlag;
-	// 濃淡
-	static int m_Shade;
-	// 表示する番号
-	static int m_Mem;
+	
 public:
-	static void Init();
-	static void Load();
+	void Init();
+	void Load();
+	void Draw();
+	void Exit();
 
-public:
-	// スコアの表示
-	static void DrawScore();
-
-	// 何倍になったか表示
-	static void DrawRate();
-
-	static void Request(int num);
 };
 

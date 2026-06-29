@@ -1,6 +1,18 @@
 #pragma once
 #include "../../../Lib/Model/Object.h"
 
+enum tagShotType {
+	// 通常弾
+	SHOT_DEFAULT,
+	// レーザー
+	SHOT_BEAM,
+	// ミサイル
+	SHOT_MISSILE,
+
+	// 総数
+	SHOT_NUM
+};
+
 class CShotBase : public CObject {
 protected:
 	// 生存フラグ
@@ -9,6 +21,8 @@ protected:
 	VECTOR m_MoveVec;
 	// 生存時間
 	int m_ActiveTime;
+	// 種類
+	tagShotType m_Type;
 
 public:
 	CShotBase();
@@ -32,4 +46,6 @@ public:
 	bool GetActiveFlag();
 	// 生存フラグのセット
 	void SetActiveFlag(bool flag);
+
+	tagShotType GetType();
 };

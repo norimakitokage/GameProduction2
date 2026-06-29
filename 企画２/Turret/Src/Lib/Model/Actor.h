@@ -31,13 +31,13 @@ public:
 	// animSrcHndl	:	アニメーションを持っているハンドル(-1ならばこのモデルのアニメ使用)
 	// NamaCheck	:	別モデルのアニメを使用する場合、モデルのフレーム名が一致していない場合
 	//					アニメをアタッチするか(abunSrcHndl=-1の場合は無視)
-	void Request(int animId, float animSpd, int animSrcHndl = -1, bool NameCheck = false);
+	void Request(int animId, float animSpd, bool detach = true, int animSrcHndl = -1, bool NameCheck = false);
 	//	ループアニメリクエスト
 	//	終わったら最初から再生される
-	void RequestLoop(int animId, float animSpd, int animSrcHndl = -1, bool NameCheck = false);
+	void RequestLoop(int animId, float animSpd, bool detach = true, int animSrcHndl = -1, bool NameCheck = false);
 	//　エンドループリクエスト
 	//　終わったら最終フレームで止まる
-	void RequestEndLoop(int animId, float animSpd, int animSrcHndl = -1, bool NameCheck = false);
+	void RequestEndLoop(int animId, float animSpd, bool detach = true, int animSrcHndl = -1, bool NameCheck = false);
 
 	//アニメーションの停止
 	void StopAnimation();

@@ -38,3 +38,8 @@ void CShotBase::SetActiveFlag(bool flag)
 {
 	m_ActiveFlag = flag;
 }
+
+tagShotType CShotBase::GetType()
+{
+	return m_Type;
+}

@@ -115,6 +115,18 @@
     <Filter Include="ソース ファイル\Game\Player\Shot\Beam">
       <UniqueIdentifier>{15d6a834-be3a-48f0-a537-3cca753a5d7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Game\Enemy">
+      <UniqueIdentifier>{d7a7a6dc-d09f-4f70-81dd-5a2a2b56b653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\Enemy\DefaultEnemy">
+      <UniqueIdentifier>{986075fc-2254-4b44-88b5-04d59c6bd630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\System\UI">
+      <UniqueIdentifier>{9d698418-3569-4f75-9b92-a01c56ff2f70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Game\HitCheck">
+      <UniqueIdentifier>{ea1516a8-869f-43bd-b6fb-0e12986886d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h">
@@ -228,6 +240,21 @@
     <ClInclude Include="Src\Game\Object\ProtectCore.h">
       <Filter>ソース ファイル\Game\Object</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Game\Enemy\EnemyManager.h">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Enemy\EnemyBase.h">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\Enemy\DefaultEnemy\DefaultEnemy.h">
+      <Filter>ソース ファイル\Game\Enemy\DefaultEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\System\UI\UI.h">
+      <Filter>ソース ファイル\Game\System\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game\HitCheck\HitCheck.h">
+      <Filter>ソース ファイル\Game\HitCheck</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
@@ -340,6 +367,21 @@
     </ClCompile>
     <ClCompile Include="Src\Game\Object\ProtectCore.cpp">
       <Filter>ソース ファイル\Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Enemy\EnemyManager.cpp">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Enemy\EnemyBase.cpp">
+      <Filter>ソース ファイル\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\Enemy\DefaultEnemy\DefaultEnemy.cpp">
+      <Filter>ソース ファイル\Game\Enemy\DefaultEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\System\UI\UI.cpp">
+      <Filter>ソース ファイル\Game\System\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Game\HitCheck\HitCheck.cpp">
+      <Filter>ソース ファイル\Game\HitCheck</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

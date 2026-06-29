@@ -5,6 +5,8 @@
 #include "../../Landform/LandformManager.h"
 #include "../../Player/Shot/ShotManager.h"
 #include "../../Object/ProtectCore.h"
+#include "../../Enemy/EnemyManager.h"
+#include "../../System/UI/UI.h"
 
 
 class CSceneGame : public CSceneBase
@@ -19,6 +21,10 @@ private:
 	CShotMnager m_Shot;
 
 	CProtectCore m_Core;
+
+	CEnemyManager m_Enemy;
+
+	CUI m_Ui;
 public:
 
 	void Draw();

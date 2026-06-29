@@ -1,7 +1,7 @@
 #pragma once
 #include "../ShotBase.h"
 
-const float DEFAULT_SHOT_SPD = 1.5f;
+const float DEFAULT_SHOT_SPD = 5.0f;
 const int DEFAULT_SHOT_ACTIVE_TIME = 120;
 const float DEFAULT_SHOT_RADIUS = 0.5f;
 

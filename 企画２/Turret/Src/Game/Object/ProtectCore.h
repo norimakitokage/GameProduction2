@@ -1,10 +1,10 @@
 #pragma once
 #include "../../Lib/Model/Actor.h"
+#include "../../Common.h"
 
 const int CORE_DEFAULT_HP = 500;
-const VECTOR CORE_DEFAULT_POS = VGet(0.0f, 0.0f, -50.0f);
 const VECTOR CORE_SIZE = VGet(0.02f, 0.02f, 0.02f);
-
+const float CORE_RADIUS = 3.0f;
 
 class CProtectCore : public CActor
 {
@@ -32,5 +32,7 @@ public:
 	// HPÇÃâ¡éZèàóù
 	//  plus	:	í«â¡Ç∑ÇÈíl
 	void AddHp(int plus);
+
+	VECTOR GetCenter();
 };
 

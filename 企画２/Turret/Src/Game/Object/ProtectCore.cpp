@@ -13,7 +13,8 @@ void CProtectCore::Load()
 {
 	CObject::LoadModel("Data/ActiveObject/ProtectCore.mv1");
 	CObject::Update();
-	CActor::RequestLoop(0, 1.0f);
+	//CActor::RequestLoop(0, 2.0f);
+	//CActor::RequestLoop(1, 1.0f, false);
 }
 
 void CProtectCore::Step()
@@ -45,4 +46,9 @@ void CProtectCore::MinusHp(int minus)
 void CProtectCore::AddHp(int plus)
 {
 	m_Hp += plus;
+}
+
+VECTOR CProtectCore::GetCenter()
+{
+	return VGet(m_Pos.x, m_Pos.y + CORE_RADIUS, m_Pos.z);
 }
