@@ -8,9 +8,17 @@
 #include "../../Enemy/EnemyManager.h"
 #include "../../System/UI/UI.h"
 
+enum tagGameState
+{
+	GAME_PLAY,
+	GAME_LEVELUP,
+};
 
 class CSceneGame : public CSceneBase
 {
+private:
+	static tagGameState m_GameState;
+
 private:
 	CPlayer m_Player;
 
@@ -28,6 +36,8 @@ private:
 public:
 
 	void Draw();
+
+	void SetGameState(tagGameState state);
 
 private:
 	void Init();

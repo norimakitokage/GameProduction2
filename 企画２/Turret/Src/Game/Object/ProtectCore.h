@@ -2,7 +2,7 @@
 #include "../../Lib/Model/Actor.h"
 #include "../../Common.h"
 
-const int CORE_DEFAULT_HP = 500;
+const int CORE_DEFAULT_HP = 100;
 const VECTOR CORE_SIZE = VGet(0.02f, 0.02f, 0.02f);
 const float CORE_RADIUS = 3.0f;
 
@@ -34,5 +34,7 @@ public:
 	void AddHp(int plus);
 
 	VECTOR GetCenter();
+
+	int GetHp();
 };
 

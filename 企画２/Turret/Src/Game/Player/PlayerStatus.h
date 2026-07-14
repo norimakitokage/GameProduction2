@@ -52,7 +52,18 @@ private:	// ステータス関連
 	// 武器のフラグ配列
 	bool m_Weapon[tagWeapon::WEAPON_NUM];
 
+	// プレイヤーの経験値
+	int m_Exp;
+
+	// 獲得経験値量保存
+	int m_MemExp;
+
+	// プレイヤーのレベル
+	int m_Level;
+
 public:
+	// データの計算
+	void Step();
 
 	// ステータスを取得
 	//  type	:	ステータスの種類
@@ -71,6 +82,14 @@ public:
 	//	type	:	武器の種類
 	//	flag	:	trueがオン,falseがオフ
 	void SetWeapon(tagWeapon type, bool flag);
+
+	// 経験値を取得した時
+	//  addNum	:	追加する経験値の値
+	void AddExp(int addNum);
+
+private:
+	// レベルアップできるか確認
+	void CheckLevelUp();
 
 };
 

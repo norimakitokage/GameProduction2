@@ -8,6 +8,8 @@
 #include "../../HitCheck/HitCheck.h"
 
 
+tagGameState CSceneGame::m_GameState;
+
 void CSceneGame::Draw()
 {
 	switch (m_State)
@@ -16,25 +18,34 @@ void CSceneGame::Draw()
 	case CSceneBase::STEP:
 	case CSceneBase::UPDATE:
 	case CSceneBase::ENDWAIT:
-		m_Land.Draw();
+		switch (m_GameState)
+		{
+		case GAME_PLAY:
+			m_Land.Draw();
 
-		m_Player.Draw();
+			m_Player.Draw();
 
-		m_Shot.Draw();
+			m_Shot.Draw();
 
-		m_Core.Draw();
+			m_Core.Draw();
 
-		m_Enemy.Draw();
+			m_Enemy.Draw();
 
-		m_Ui.Draw();
+			m_Ui.Draw(m_Core);
+
+		case GAME_LEVELUP:
+			break;
+		
+		}
 		break;
 	}
 }
 
-
 void CSceneGame::Init()
 {
 	m_State = LOAD;
+
+	m_GameState = GAME_PLAY;
 
 	CInput* input = CInput::GetInstance();
 	input->Init();
@@ -85,15 +96,27 @@ void CSceneGame::Step()
 	CInput* input = CInput::GetInstance();
 	input->Step();
 
-	m_Camera.Step(m_Player.GetPosition());
-	m_Player.Step(m_Shot, m_Camera);
-	m_Shot.Step();
-	m_Core.Step();
-	m_Enemy.Step();
+	switch (m_GameState)
+	{
+	case GAME_PLAY:
 
-	CHitCheck::EnemyToDefaultShot(m_Shot, m_Enemy);
+		m_Camera.Step(m_Player.GetPosition());
+		m_Player.Step(m_Shot, m_Camera);
+		m_Shot.Step();
+		m_Core.Step();
+		m_Enemy.Step();
 
-	if (CKey::Rep(KEY_INPUT_RETURN)) {
+		// “–‚½‚è”»’è
+		CHitCheck::EnemyToDefaultShot(m_Shot, m_Enemy);
+		CHitCheck::CoreToEnemy(m_Core, m_Enemy);
+		break;
+	case GAME_LEVELUP:
+
+		break;
+	}
+	
+
+	if (!m_Core.GetIsActive()) {
 		CFade::RequestFadeOut();
 		m_State = ENDWAIT;
 		return;
@@ -133,3 +156,11 @@ void CSceneGame::Exit()
 
 	m_State = INIT;
 }
+
+void CSceneGame::SetGameState(tagGameState state)
+{
+	m_GameState = state;
+}
+
+
+

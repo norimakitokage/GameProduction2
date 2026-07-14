@@ -38,6 +38,9 @@ protected:
 	// ˆÚ“®‘¬“x
 	float m_Speed;
 
+	// ŠŒoŒ±’l
+	int m_Exp;
+
 public:
 	virtual void Init() = 0;
 	virtual void Load(int model);
@@ -52,5 +55,6 @@ public:
 	VECTOR GetCenterPos();
 	tagEnemyType GetType();
 	void MinusHp(int dmg);
+	int GetPower();
 };
 

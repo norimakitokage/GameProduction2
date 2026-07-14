@@ -4,7 +4,7 @@
 void CProtectCore::Init()
 {
 	m_Hp = CORE_DEFAULT_HP;
-	m_ActiveFlag = false;
+	m_ActiveFlag = true;
 	m_Pos = CORE_DEFAULT_POS;
 	m_Scale = CORE_SIZE;
 }
@@ -51,4 +51,9 @@ void CProtectCore::AddHp(int plus)
 VECTOR CProtectCore::GetCenter()
 {
 	return VGet(m_Pos.x, m_Pos.y + CORE_RADIUS, m_Pos.z);
+}
+
+int CProtectCore::GetHp()
+{
+	return m_Hp;
 }

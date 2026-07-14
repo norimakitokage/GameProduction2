@@ -14,6 +14,7 @@ void CDefaultEnemy::Init()
 	m_Pos.y = SPORN_POS.y;
 	m_Pos.x = CRand::Rand(SPORN_POS.x - SPOERNWIDE, SPORN_POS.x + SPOERNWIDE);
 	m_Hp = DEFAULT_ENEMY_HP;
+	m_Exp = DEFAULT_ENEMY_EXP;
 }
 
 void CDefaultEnemy::Draw()

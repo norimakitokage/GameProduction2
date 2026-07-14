@@ -1,4 +1,6 @@
 #include "EnemyBase.h"
+#include "../Player/PlayerStatus.h"
+
 
 void CEnemyBase::Load(int model)
 {
@@ -8,6 +10,8 @@ void CEnemyBase::Load(int model)
 void CEnemyBase::Step()
 {
 	if (m_Hp <= 0) {
+		CPlayerStatus* status = CPlayerStatus::GetInstance();
+		status->AddExp(m_Exp);
 		m_ActiveFlag = false;
 	}
 }
@@ -58,4 +62,9 @@ tagEnemyType CEnemyBase::GetType()
 void CEnemyBase::MinusHp(int dmg)
 {
 	m_Hp -= dmg;
+}
+
+int CEnemyBase::GetPower()
+{
+	return m_Power;
 }

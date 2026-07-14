@@ -25,12 +25,12 @@ void CHitCheck::EnemyToDefaultShot(CShotMnager& shot, CEnemyManager& enemy)
 
 void CHitCheck::CoreToEnemy(CProtectCore& core, CEnemyManager& enemy)
 {
-	vector<CEnemyBase*> p_enemy = enemy.GetVector();
-	for (auto e : p_enemy) {
+	for (auto e : enemy.GetVector()) {
 		bool flag = false;
 		flag = CColl::SphereToSphere(core.GetCenter(), CORE_RADIUS, e->GetCenterPos(), ENEMY_RADIUS);
 		if (flag) {
-
+			e->SetActiveFlag(false);
+			core.MinusHp(e->GetPower());
 		}
 	}
 	
